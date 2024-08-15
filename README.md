@@ -45,6 +45,8 @@
   <a href="https://github.com/Tfreire455/casa-verde" style="color: #4CAF50; text-decoration: none;">Acesse o repositório</a>
 </div>
 
+<hr style="border: 1px solid #4CAF50;">
+
 <div style="text-align: center;">
   <p style="font-size: 16px; color: #555;">Link:</strong></p>
   <a href="https://casa-verde-nu-eight.vercel.app" style="color: #4CAF50; text-decoration: none;">Acesse o site!</a>
