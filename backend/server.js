@@ -10,7 +10,7 @@ const app = express();
 
 // Configura o CORS para permitir requisições do frontend
 app.use(cors({
-  origin: 'https://casa-verde-o9tt.vercel.app' // Substitua pelo URL do seu frontend
+  origin: 'https://casa-verde-nu-eight.vercel.app' // Substitua pelo URL do seu frontend
 }));
 
 // Configura o middleware para analisar o corpo das requisições como JSON
