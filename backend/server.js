@@ -1,23 +1,33 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const dotenv = require("dotenv");
-const cors = require("cors");
+const cors = require('cors');
 
+// Configura o dotenv para carregar variáveis de ambiente
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+// Configura o CORS para permitir requisições do frontend
+app.use(cors({
+  origin: 'https://casa-verde-o9tt.vercel.app' // Substitua pelo URL do seu frontend
+}));
+
+// Configura o middleware para analisar o corpo das requisições como JSON
 app.use(express.json());
 
+// Variáveis de ambiente para o transporte de e-mail
 const host = process.env.SMTP_HOST;
 const port = process.env.SMTP_PORT;
 const user = process.env.USER_MAIL;
 const pass = process.env.USER_PASSWORD;
 
+// Rota para verificar se o servidor está funcionando
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
+// Rota para enviar e-mail
 app.post("/send-email", async (req, res) => {
   const { email } = req.body;
 
@@ -25,6 +35,7 @@ app.post("/send-email", async (req, res) => {
     return res.status(400).json({ error: "O e-mail é necessário" });
   }
 
+  // Configuração do transporte de e-mail
   const transporter = nodemailer.createTransport({
     host,
     port,
@@ -41,6 +52,7 @@ app.post("/send-email", async (req, res) => {
   try {
     console.log("Sending email to:", email); // Log para verificar o e-mail
 
+    // Envio do e-mail
     const info = await transporter.sendMail({
       from: user,
       to: email,
@@ -59,6 +71,7 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
+// Inicializa o servidor
 app.listen(3000, () => {
   console.log("Server listening on port 3000");
 });
