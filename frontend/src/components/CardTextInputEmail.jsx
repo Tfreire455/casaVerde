@@ -18,7 +18,8 @@ const CardTextEmail = () => {
   const [alert, setAlert] = useState(null);
 
   // Certifique-se de que baseUrl está correto
-  const baseUrl = "https://casa-verde-o9tt.vercel.app";
+  const baseUrl = "https://casa-verde-o9tt.vercel.app"; // URL do backend
+
 
   const sendEmail = async () => {
     let dataSend = {
