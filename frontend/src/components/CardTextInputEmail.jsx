@@ -27,7 +27,7 @@ const CardTextEmail = () => {
     };
 
     try {
-      const res = await fetch(`${baseUrl}/send-email`, {
+      const res = await fetch(`${baseUrl}`, {
         method: "POST",
         body: JSON.stringify(dataSend),
         headers: {
