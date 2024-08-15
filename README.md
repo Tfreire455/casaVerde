@@ -44,3 +44,8 @@
   <p style="font-size: 16px; color: #555;">Desenvolvido por <strong>Thiago Moabi de Souza Freire</strong></p>
   <a href="https://github.com/Tfreire455/casa-verde" style="color: #4CAF50; text-decoration: none;">Acesse o repositório</a>
 </div>
+
+<div style="text-align: center;">
+  <p style="font-size: 16px; color: #555;">Link:</strong></p>
+  <a href="[https://casa-verde-nu-eight.vercel.app/" style="color: #4CAF50; text-decoration: none;">Acesse o site!</a>
+</div>
