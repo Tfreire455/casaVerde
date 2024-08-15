@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 });
 
 // Rota para enviar e-mail
-app.post("/send-email", async (req, res) => {
+app.post("/", async (req, res) => {
   const { email } = req.body;
 
   if (!email) {
